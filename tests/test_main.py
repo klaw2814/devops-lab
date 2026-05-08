@@ -26,3 +26,8 @@ def test_create_ticket():
     )
 
     assert response.status_code == 200
+
+def test_get_tickets():
+    response = client.get("/tickets")
+
+    assert response.status_code == 200
